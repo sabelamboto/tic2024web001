@@ -1,29 +1,62 @@
-document.getElementById("creditosBtn").addEventListener("click", function() {
-    alert("Autor:SABELA MARTINEZ BOTO\nCurso y grupo:N21 2B");
-});
-
-document.getElementById("ocultarBtn").addEventListener("click", function() {
-    document.querySelector(".bloque1").style.display = "none";
-});
-
-document.getElementById("mostrarBtn").addEventListener("click", function() {
-    document.querySelector(".bloque1").style.display = "block";
-});
-
-document.getElementById("cambiarColorBtn").addEventListener("click", function() {
-    document.querySelector(".bloque1").style.backgroundColor = "purple";
-});
-
 function mostrarFecha() {
+
     var fecha = new Date();
+
     alert("La fecha actual es: " + fecha);
+
 }
+
+
+
+
 
 function cambiarColorFondo(elemento) {
+
     elemento.style.backgroundColor = "lightgreen";
+
 }
+
 
 
 function restaurarColorFondo(elemento) {
+
     elemento.style.backgroundColor = "";
+
 }
+
+
+
+
+
+document.getElementById("ubicacionBtn").addEventListener("click", function() {
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+        var latitud = position.coords.latitude;
+
+        var longitud = position.coords.longitude;
+
+        
+
+        var mapa = L.map('ubicacionMapa').setView([latitud, longitud], 13);
+
+
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+            attribution: '© OpenStreetMap contributors'
+
+        }).addTo(mapa);
+
+
+
+        L.marker([latitud, longitud]).addTo(mapa)
+
+            .bindPopup('¡Estás aquí!')
+
+            .openPopup();
+
+    });
+
+});
+
