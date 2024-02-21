@@ -1,111 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Comidas Tradicionales Españolas</title>
-
     <link rel="stylesheet" href="styles.css">
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
- 
-    <script src="script.js" defer></script>
-
 </head>
-
 <body bgcolor="#86C1C3">
-
-
 
 <img width="400" src="https://gastronomiaycia.republica.com/wp-content/uploads/2013/10/100_tradicion_rag.jpg">
 
-
-
 <div class="bloque1" onmouseover="mostrarFecha()">    
-
     <h1>Comidas Tradicionales Españolas</h1>
-
     <h3>1. Paella</h3>
-
     <p>La paella es el plato más emblemático de la gastronomía española. Originaria de la región de Valencia, se trata de un arroz amarillo cocido con mariscos, carne o verduras. Su sabor único y su color característico, que proviene del azafrán, la han convertido en un plato famoso en todo el mundo.</p>
-
 </div>
-
-
 
 <div class="bloque2" onmouseover="cambiarColorFondo(this)" onmouseout="restaurarColorFondo(this)">
-
     <h3>2. Embutido</h3>
-
     <p>Los tipos de embutidos más destacados y consumidos en 2023 serían:</p>
-
     <ol>
-
         <li>Jamón</li>
-
         <li>Cecina</li>
-
         <li>Chorizo</li>
-
     </ol>
 
-
-
     <h3>3. Croquetas</h3>
-
     <p>De croquetas hay muchos tipos, por lo que adjunto algunos enlaces a las recetas más comunes:</p>
-
     <ul>
-
         <li><a href="https://www.hogarmania.com/cocina/recetas/aperitivos/croquetas-jamon-23393.html">Croquetas de jamón</a></li>
-
         <li><a href="https://www.abc.es/recetasderechupete/croquetas-caseras-de-pollo/12145/">Croquetas de pollo</a></li>
-
         <li><a href="https://www.abc.es/recetasderechupete/receta-de-croquetas-de-cocido-caseras/1312/?ref=https%3A%2F%2Fwww.google.com%2F">Croquetas de cocido</a></li>
-
     </ul>
-
 </div>
 
-
-
 <button id="creditosBtn">Créditos</button>
-
 <button id="ocultarBtn">Ocultar Sección</button>
-
 <button id="mostrarBtn">Mostrar Sección</button>
-
 <button id="cambiarColorBtn">Cambiar Color</button>
-
 <button id="ubicacionBtn">Obtener Ubicación</button>
-
-
 
 <div id="ubicacionMapa" style="height: 400px;"></div>
 
-
-
 <center>
-
     <h4 id="copyright">Copyright 2023</h4>
-
 </center>
 
-
-
 <script src="script.js"></script>
-
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-
-
 </body>
-
 </html>
+
 
  
